@@ -1,1 +1,4 @@
-Great Britain/London
+Great Britain/London/2
+Poland/Warsaw/2
+France/Paris/3
+Russia/Moscow/0
