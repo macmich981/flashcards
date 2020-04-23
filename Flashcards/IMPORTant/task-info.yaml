@@ -559,6 +559,66 @@ files:
         }
     }
   learner_created: false
+- name: capitals.txt
+  visible: true
+  learner_created: true
+- name: testLog.txt
+  visible: true
+  text: "Input the action (add, remove, import, export, ask, exit, log, hardest card,\
+    \ reset stats):\nhardest card\nThere are no cards with errors.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    add\nThe card:\nFrance\nThe definition of the card:\nParis\nThe pair (\"France\"\
+    :\"Paris\") has been added.\n\nInput the action (add, remove, import, export,\
+    \ ask, exit, log, hardest card, reset stats):\nask\nHow many times to ask?\n2\n\
+    Print the definition of \"France\":\nFrance\nWrong answer. The correct one is\
+    \ \"Paris\".\nPrint the definition of \"France\":\n??\nWrong answer. The correct\
+    \ one is \"Paris\".\nInput the action (add, remove, import, export, ask, exit,\
+    \ log, hardest card, reset stats):\nhardest card\nThe hardest card is \"France\"\
+    . You have 2 errors answering it.\n\nInput the action (add, remove, import, export,\
+    \ ask, exit, log, hardest card, reset stats):\nreset stats\nCard statistics has\
+    \ been reset.\n\nInput the action (add, remove, import, export, ask, exit, log,\
+    \ hardest card, reset stats):\nhardest card\nThere are no cards with errors.\n\
+    \nInput the action (add, remove, import, export, ask, exit, log, hardest card,\
+    \ reset stats):\nadd\nThe card:\nRussia\nThe definition of the card:\nMoscow\n\
+    The pair (\"Russia\":\"Moscow\") has been added.\n\nInput the action (add, remove,\
+    \ import, export, ask, exit, log, hardest card, reset stats):\nask\nHow many times\
+    \ to ask?\n2\nPrint the definition of \"Russia\":\n??\nWrong answer. The correct\
+    \ one is \"Moscow\".\nPrint the definition of \"France\":\n??\nWrong answer. The\
+    \ correct one is \"Paris\".\nInput the action (add, remove, import, export, ask,\
+    \ exit, log, hardest card, reset stats):\nhardest card\nThe hardest cards are\
+    \ \n\"France\", \n\"Russia\". You have 1 errors answering it.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    ask\nHow many times to ask?\n2\nPrint the definition of \"Russia\":\n??\nWrong\
+    \ answer. The correct one is \"Moscow\".\nPrint the definition of \"Russia\":\n\
+    ??\nWrong answer. The correct one is \"Moscow\".\nInput the action (add, remove,\
+    \ import, export, ask, exit, log, hardest card, reset stats):\nhardest card\n\
+    The hardest card is \"Russia\". You have 3 errors answering it.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    ask\nHow many times to ask?\n2\nPrint the definition of \"Russia\":\n??\nWrong\
+    \ answer. The correct one is \"Moscow\".\nPrint the definition of \"France\":\n\
+    ??\nWrong answer. The correct one is \"Paris\".\nInput the action (add, remove,\
+    \ import, export, ask, exit, log, hardest card, reset stats):\nhardest card\n\
+    The hardest card is \"Russia\". You have 4 errors answering it.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    ask\nHow many times to ask?\n2\nPrint the definition of \"France\":\n??\nWrong\
+    \ answer. The correct one is \"Paris\".\nPrint the definition of \"Russia\":\n\
+    ??\nWrong answer. The correct one is \"Moscow\".\nInput the action (add, remove,\
+    \ import, export, ask, exit, log, hardest card, reset stats):\nhardest card\n\
+    The hardest card is \"Russia\". You have 5 errors answering it.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    ask\nHow many times to ask?\n2\nPrint the definition of \"Russia\":\n??\nWrong\
+    \ answer. The correct one is \"Moscow\".\nPrint the definition of \"France\":\n\
+    ??\nWrong answer. The correct one is \"Paris\".\nInput the action (add, remove,\
+    \ import, export, ask, exit, log, hardest card, reset stats):\nhardest card\n\
+    The hardest card is \"Russia\". You have 6 errors answering it.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    export\nFile name:\ncapitals.txt\n2 cards have been saved.\n\nInput the action\
+    \ (add, remove, import, export, ask, exit, log, hardest card, reset stats):\n\
+    log\nFile name:\ntestLog.txt\n"
+  learner_created: false
+- name: capitalsNew.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/44/stages/238/implement
-status: Unchecked
+status: Solved
 record: -1

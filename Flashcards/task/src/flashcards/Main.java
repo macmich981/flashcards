@@ -112,11 +112,8 @@ public class Main {
         }
     }
 
-    private static void saveCards(Map<String, String> cards, Map<String, Integer> mistakes) {
-        System.out.println("File name:");
-        log.add("File name:");
-        String filename = SCANNER.next();
-        log.add(filename);
+    private static void saveCards(Map<String, String> cards, Map<String, Integer> mistakes, String filename) {
+
         File file = new File(filename);
 
         try (PrintWriter writer = new PrintWriter(file)) {
@@ -129,14 +126,9 @@ public class Main {
         }
         System.out.println(cards.size() + " cards have been saved.\n");
         log.add(cards.size() + " cards have been saved.\n");
-        SCANNER.nextLine();
     }
 
-    private static void loadCards(Map<String, String> cards, Map<String, Integer> mistakes) {
-        System.out.println("File name:");
-        log.add("File name:");
-        String filename = SCANNER.next();
-        log.add(filename);
+    private static void loadCards(Map<String, String> cards, Map<String, Integer> mistakes, String filename) {
         File file = new File(filename);
         List<String> tempCards;
         String term;
@@ -160,7 +152,6 @@ public class Main {
             System.out.println("File not found.\n");
             log.add("File not found.\n");
         }
-        SCANNER.nextLine();
     }
 
     private static void saveLog() {
@@ -230,6 +221,13 @@ public class Main {
         Map<String, String> cards = new HashMap<>();
         Map<String, Integer> mistakes = new HashMap<>();
 
+        for (int i = 0; i < args.length; i += 2) {
+            if ("-import".equals(args[i])) {
+                if (i + 1 < args.length) {
+                    loadCards(cards, mistakes, args[i + 1]);
+                }
+            }
+        }
         while (true) {
             System.out.println("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):");
             log.add("Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):");
@@ -246,10 +244,20 @@ public class Main {
                     askForCard(cards, mistakes);
                     break;
                 case "export":
-                    saveCards(cards, mistakes);
+                    System.out.println("File name:");
+                    log.add("File name:");
+                    String filename1 = SCANNER.next();
+                    log.add(filename1);
+                    saveCards(cards, mistakes, filename1);
+                    SCANNER.nextLine();
                     break;
                 case "import":
-                    loadCards(cards, mistakes);
+                    System.out.println("File name:");
+                    log.add("File name:");
+                    String filename = SCANNER.next();
+                    log.add(filename);
+                    loadCards(cards, mistakes, filename);
+                    SCANNER.nextLine();
                     break;
                 case "log":
                     saveLog();
@@ -262,6 +270,13 @@ public class Main {
                     break;
                 case "exit":
                     System.out.println("Bye bye!");
+                    for (int i = 0; i < args.length; i += 2) {
+                        if ("-export".equals(args[i])) {
+                            if (i + 1 < args.length) {
+                                saveCards(cards, mistakes, args[i + 1]);
+                            }
+                        }
+                    }
                     System.exit(0);
             }
         }

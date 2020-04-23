@@ -1,2 +1,2 @@
-France/Paris/4
-Russia/Moscow/6
+France/Paris/1
+Russia/Moscow/5
